@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Bot Clean</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+	<link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+	<div class="container-fluid">
+
+		<div class="row" id="titlebar">
+			<div class="col-sm-12">
+				<h1>Bot Clean</h1>
+				<h6>
+					Based on the HackerRank.com challenge.
+				</h6>
+			</div>
+		</div>
+
+		<div class="row" id="contentarea">
+			<div class="col-sm-12">
+
+				<div class="form-group row">
+					<label for="rowsIn" class="col-sm-2 col-form-label">Rows</label>
+					<div class="col-sm-4">
+						<input type="number" class="form-control" id="rowsIn" placeholder="Enter the number of rows.">
+					</div>
+					<label for="colsIn" class="col-sm-2 col-form-label">Columns</label>
+					<div class="col-sm-4">
+						<input type="number" class="form-control" id="colsIn" placeholder="Enter the number of columns.">
+					</div>
+				</div>
+
+				<div class="form-group row">
+					<div class="col-sm-12">
+						<button class="btn btn-primary" id="startBtn">Start</button>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-sm-12" id="renderArea">
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js"></script>
+	<script src="main.js"></script>
+
+</body>
+
+</html>

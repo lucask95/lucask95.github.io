@@ -1,12 +1,26 @@
 header {
-    background-color: #2e2e2e;
     padding: 20px;
     color: white;
 }
 
+.bg0 {
+    background-color: #2e2e2e;
+}
+
+.bg1 {
+    background-color: #b4e3d2;
+}
+
+.bg2 {
+    background-color: #f4f4f4;
+}
+
+.bg3 {
+    background-color: #e3e3e3;
+}
+
 .intro-row {
     padding: 35px 25px;
-    background-color: #b4e3d2;
 }
 
 .p-intro {
