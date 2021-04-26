@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="A searchable list of hundreds web stores at which to shop for clothing. Categorized by price, style, keywords, and location.">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Where to Buy Clothes - A List of Hundreds of Web Stores at Which to Buy Clothing</title>
+	<link rel="icon" type="image/png" href="img/favicon.png">
+	<link href="https://fonts.googleapis.com/css?family=Raleway:300|Roboto" rel="stylesheet">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/skeleton.css">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+	<div class="u-full-width">
+
+		<header class="row">
+			<div class="twelve columns">
+				<h2>Where To Buy Clothes</h2>
+			</div>
+		</header>
+
+		<!-- Menu
+		TODO:
+		- Adjust menu with multiple items: help, FAQ, tips, about
+		- Also, make menu buttons look better. would probably be better if they
+		  had no outline or background and were just underlined
+		---------------------------------------------->
+
+		<div class="row" id="menuRow">
+			<div class="twelve columns">
+				<button id="helpBtn">Help</button>
+				<!--
+				<button>FAQ</button>
+				<button>Suggestions</button>
+				<button>About</button>
+				-->
+			</div>
+		</div>
+
+		<!-- Help
+		---------------------------------------------->
+
+		<div class="row help-row hidden" id="helpArea">
+			<div class="twelve columns">
+				<h4>Help</h4>
+				<p>For some general guidelines on what things mean.</p>
+				<h5>Keywords</h5>
+				<ul>
+					<li><strong>General:</strong> This store is probably a
+						single-brand store with a range of clothing that can cover
+						a few similar styles.</li>
+					<li><strong>Everything:</strong> This store stocks multiple
+						brands with many different styles. Includes general.</li>
+					<li><strong>Streetwear:</strong> An umbrella keyword used for
+						when a store does not have a distinct and describable style,
+						but is a more casual style.</li>
+				</ul>
+				<h5>Price Guidelines</h5>
+				<p>Pricing category is hard to get perfect, but I try to adhere
+					to these guidelines.</p>
+				<ul>
+					<li>$ = Pretty much the lowest priced shops. Those who are
+						new to fashion and don't want to spend much should check
+						these out. Shirts will usually be $50 or below and
+						outerwear will usually not go above $150 dollars or so.</li>
+					<li>$$ = Not comfortable dropping hundreds of dollars per item,
+						but want to go a step above Uniqlo and Gap. Shirts will
+						be nearing or around $100 mark and outerwear will generally
+						be in the $100-$250 range.</li>
+					<li>$$$ = Designers, big-name brands, and more. Shirts will
+						be at least $150 and above and outerwear will cost $300+.
+						$$$ covers lots and lots of brands and designers.</li>
+					<li>$$$$ = Reserved for the most significantly expensive brands.
+						Shirts will usually be $300+ and outerwear will be over $1000</li>
+				</ul>
+				<h5>Notes</h5>
+				<ul>
+					<li>I know the UK is not a country.</li>
+					<li>I know the descriptions and price are a bit inconsistent.
+						It's hard to be both concise and accurate.</li>
+					<li>The list is a work-in-progress. It will be updated over
+						time.</li>
+					<li>"Country" Does not necessarily mean that the store
+						<i>only</i> ships to that country.</li>
+					<li>If you spot a mistake or have a suggestion,
+						<a href="https://www.reddit.com/message/compose/?to=Smilotron">
+							message me on reddit.</a></li>
+				</ul>
+				<h5>Useful Non-Store Pages</h5>
+				<ul>
+					<li><a href="http://www.heddels.com/sale-finder/">
+						Heddels Sale Finder</a></li>
+					<li><a href="http://www.styleforum.net/t/54258/the-official-list-of-online-stores">
+						Styleforum List of Online Stores</a></li>
+					<li><a href="http://www.styleforum.net/t/38417/official-sales-alert-thread">
+						Styleforum Sales Alerts</a></li>
+					<li><a href="https://www.reddit.com/r/japanesestreetwear/comments/3l4q9t/list_of_websites_selling_japanese_clothes_eastern/">
+						List of Websites selling Japanese clothes</a></li>
+					<li><a href="http://www.themodestman.com/best-places-to-buy-clothes-for-short-men/">
+						Best Places to Buy Clothes for Short Men</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<!-- Search and pagination
+		---------------------------------------------->
+
+		<div class="row controls-row">
+
+			<div class="six columns">
+
+				<!-- Stores per page
+				---------------------------------------------->
+
+				<div class="selectArea">
+					Display
+					<select id="displayNumber">
+						<option value="25">25</option>
+						<option value="50">50</option>
+						<option value="100">100</option>
+						<option value="all">All</option>
+					</select>
+					stores per page.
+				</div>
+
+				<!-- Go to page
+				---------------------------------------------->
+
+				<div class="selectArea">
+					Go to page
+					<input type="number" id="pageInput" placeholder="Number" />
+				</div>
+
+				<!-- Pagination
+				---------------------------------------------->
+
+				<nav>
+					<ul id="pageSwitch">
+					</ul>
+				</nav>
+
+			</div>
+
+			<div class="six columns">
+
+				<!-- Search
+				---------------------------------------------->
+
+				<span id="searchSpan">
+					<label for="searchInput">Press Enter to Search</label>
+					<input type="text" id="searchInput" placeholder="Search" />
+					<select id="searchCategory">
+						<option value="Name">Name</option>
+						<option value="Keywords">Keywords</option>
+						<option value="Price">Price</option>
+						<option value="Country">Country</option>
+						<option value="Notes">Notes</option>
+					</select>
+					<button id="clearSearchBtn" class="hidden" onClick="clearSearch()">Clear Search</button>
+				</span>
+
+			</div>
+
+		</div>
+
+		<div class="row" id="contentarea">
+			<div class="twelve columns">
+				<table class="u-full-width">
+
+					<!-- Table Header
+					---------------------------------------------->
+
+					<thead>
+						<tr>
+							<th category="Name">Name &#9650;</th>
+							<th category="Keywords">Keywords</th>
+							<th category="Price" style="width: 10%">Price</th>
+							<th category="Country" style="width: 15%">Country</th>
+							<th category="Notes">Notes</th>
+						</tr>
+					</thead>
+
+					<!-- Table Body
+					---------------------------------------------->
+
+					<tbody id="storesTable">
+					</tbody>
+
+				</table>
+			</div>
+		</div>
+
+	</div>
+
+	<footer class="row">
+		<div class="twelve columns">
+			Made by <a href="#">Lucas Keller</a><br />
+			See the code on <a href="https://github.com/lucask95/ClothingWebStores">GitHub</a>
+		</div>
+	</footer>
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/main.js"></script>
+
+</body>
+
+</html>

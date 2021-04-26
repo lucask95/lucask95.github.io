@@ -1,0 +1,34 @@
+#titlebar {
+    padding: 30px;
+    background-color: #262626;
+    color: white;
+}
+
+#contentarea {
+    padding: 50px;
+}
+
+#moveLog {
+    margin: 0 0 0 10px;
+}
+
+#botImage {
+    position: absolute;
+    z-index: 100;
+}
+
+.tile {
+    background-color: #efefef;
+    width: 64px;
+    height: 64px;
+    position: absolute;
+    z-index: -1;
+    -webkit-transition: background-color 250ms ease-out;
+    -moz-transition:    background-color 250ms ease-out;
+    -o-transition:      background-color 250ms ease-out;
+    transition:         background-color 250ms ease-out;
+}
+
+.dirty {
+    background-color: #7c7c7c;
+}

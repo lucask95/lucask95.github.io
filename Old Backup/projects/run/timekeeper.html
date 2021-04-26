@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Time Keeper</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+	<link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+
+	<div class="container-fluid">
+
+		<div class="row" id="titlebar">
+			<div class="col-sm-12">
+				<h2>Time Keeper</h2>
+			</div>
+		</div>
+
+		<div class="row" id="contentarea">
+			<div class="col-sm-12">
+
+				<div class="form-group row">
+					<label for="timeIn" class="col-sm-2 col-form-label">Time</label>
+					<div class="col-sm-8">
+						<input type="text" class="form-control" id="timeIn" placeholder="HH:MM:SS">
+					</div>
+					<div class="col-sm-2">
+						<button class="btn btn-primary" id="goBtn">Insert Time</button>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-sm-3">
+						<h4>Run History</h4>
+						<p class="outputbox" id="timesOut"></p>
+					</div>
+					<div class="col-sm-9">
+						<h4>Your Run Information</h4>
+						<p class="outputbox" id="infoOut"></p>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-sm-2"></div>
+					<div class="col-sm-8">
+						<canvas id="myChart"></canvas>
+					</div>
+					<div class="col-sm-2"></div>
+				</div>
+
+			</div>
+		</div>
+
+	</div>
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/tether.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/lodash.min.js"></script>
+	<script src="js/Chart.min.js"></script>
+	<script src="main.js"></script>
+
+</body>
+
+</html>

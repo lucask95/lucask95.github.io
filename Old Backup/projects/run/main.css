@@ -1,0 +1,44 @@
+ul {
+    margin-bottom: 0px;
+    padding-left: 10px;
+    list-style: none;
+}
+
+canvas {
+    margin-top: 10px;
+}
+
+#titlebar {
+    padding: 30px;
+    background-color: #262626;
+    color: white;
+}
+
+#contentarea {
+    padding: 50px;
+}
+
+.runtime {
+    margin: 5px 0px 5px 0px;
+}
+
+.outputbox {
+    margin: 10px 0 0 0;
+    padding: 15px;
+    background-color: #efefef;
+    border-radius: 5px;
+}
+
+.x {
+    font-size: .75em;
+    padding: 2px 7px 5px 7px;
+    margin: 0px 5px 0px 0px;
+    border-radius: 2px;
+    cursor: pointer;
+    background-color: #c1503a;
+    color: white;
+}
+
+.x:hover {
+    background-color: #e05b41;
+}

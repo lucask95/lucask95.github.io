@@ -1,0 +1,20 @@
+header {
+    background-color: #2e2e2e;
+    padding: 20px;
+    color: white;
+}
+
+canvas {
+    margin: auto;
+}
+
+#fileBtn {
+    margin-left: 10px;
+}
+
+#inputArea, #controlsArea {
+    margin: 15px 0px;
+    background-color: #e7e7e7;
+    padding: 15px;
+    border-radius: 2px;
+}
